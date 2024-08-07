@@ -19,6 +19,7 @@ export default function Home() {
   const pulsingBg = useTransform(pulse, (r) => {
     return `blur(${r}px)`;
   });
+
   useEffect(() => {
     pulse.set(10);
   }, []);
