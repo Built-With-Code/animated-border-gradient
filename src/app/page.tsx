@@ -32,7 +32,7 @@ export default function Home() {
           Subscribe to Built With Code
         </button>
         <motion.div
-          className="absolute -inset-[1px] bg-yellow-100 rounded-md"
+          className="absolute -inset-[1px] rounded-md"
           style={{
             background: rotatingBg,
           }}
@@ -43,15 +43,15 @@ export default function Home() {
         <button className="relative bg-neutral-700 px-3 py-2 rounded-md hover:bg-neutral-800 transition-colors duration-200 z-10">
           Subscribe to Built With Code
         </button>
-        <motion.div
-          className="absolute -inset-[1px] bg-yellow-100 rounded-md"
+        <div
+          className="absolute -inset-[1px] rounded-md"
           style={{
             background:
               "conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545)",
           }}
         />
         <motion.div
-          className="absolute -inset-[1px] bg-yellow-100 rounded-md opacity-50"
+          className="absolute -inset-[1px] rounded-md opacity-50"
           style={{
             background:
               "conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545)",
