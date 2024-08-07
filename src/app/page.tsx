@@ -6,19 +6,21 @@ import { useEffect } from "react";
 export default function Home() {
   const time = useTime();
 
-  const rotate = useTransform(time, [0, 2000], [0, 360], {
+  // Rotating animation
+  const rotate = useTransform(time, [0, 3000], [0, 360], {
     clamp: false,
   });
   const rotatingBg = useTransform(rotate, (r) => {
     return `conic-gradient(from ${r}deg, #ff4545, #00ff99, #006aff, #ff0095, #ff4545)`;
   });
 
-  const pulse = useSpring(0, { damping: 0, mass: 5 });
+  // Pulsing animation
+  const pulse = useSpring(0, { damping: 0, mass: 5, stiffness: 10 });
   const pulsingBg = useTransform(pulse, (r) => {
     return `blur(${r}px)`;
   });
   useEffect(() => {
-    pulse.set(2);
+    pulse.set(10);
   }, []);
 
   return (
